@@ -2,10 +2,53 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Primary-white {
+  color: #CBD7F7;
 }
+
+.Secondary-teal {
+  color: #45AD9F;
+}
+
+.Third-grey {
+  color: #8892B0;
+}
+
+/* CSS class to better see invisible elements on a page */
+.boxy {
+  border: 2px dotted red;
+}
+
+/* CSS animation to create the falling effect */ 
+@keyframes fallingAnimation {
+  0% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Wiggle animation */
+@keyframes wiggleAnimation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25%, 75% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+.kirby-logo {
+  height: 20vmin;
+  animation: fallingAnimation 2.5s ease-in-out both, wiggleAnimation 0.5s ease-in-out 3.5s 1 alternate;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,6 +57,17 @@
 }
 
 .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
