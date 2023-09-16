@@ -3,6 +3,7 @@ import "./App.css";
 
 // imported React pages
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
@@ -31,6 +32,7 @@ function App() {
               <Route component={NotFound} /> {/* 404 route */}
             </Switch>
           </div>
+          <Footer />
         </body>
       </div>
     </Router>
