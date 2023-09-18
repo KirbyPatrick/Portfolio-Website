@@ -12,6 +12,9 @@ import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import NotFound from "./pages/NotFound";
 
+// imported Components
+import Button from "./components/Button";
+
 // imported tools
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
@@ -21,6 +24,7 @@ function App() {
       <div className="App">
         <body className="App-body">
           <Nav />
+          <Button />
           <div>
             <Switch>
               <Route path exact="/" component={Home} />
